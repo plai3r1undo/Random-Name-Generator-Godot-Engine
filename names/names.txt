@@ -1,0 +1,25 @@
+extends Node
+
+var name_list = []
+
+func _ready():
+	var file = File.new()
+	var file_path = "res://names.json"
+	print("file path: ",file_path)
+	if file.file_exists(file_path):
+		print("file exists")
+		if file.open(file_path, File.READ_WRITE):
+			var json_string = file.get_as_text()
+			file.close()
+			var json_data = JSON.parse(json_string)
+			name_list = json_data["names"]
+			if name_list.size() > 0:
+				var random_index = randi() % name_list.size()
+				var random_name = name_list[random_index]
+				print(random_name)
+			else:
+				print("No names found in file.")
+		else:
+			print("File not found.")
+	else:
+		print("File not found.")
