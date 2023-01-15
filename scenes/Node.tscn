@@ -1,15 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://script/nomi_casuali.gd" type="Script" id=1]
-[ext_resource path="res://names/Red Ribbory Personal Use Only !!!.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://OpenSans-SemiboldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://BLKCHCRY.TTF" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 60
+outline_size = 3
+outline_color = Color( 0.105882, 0.705882, 0.678431, 1 )
 font_data = ExtResource( 2 )
 
 [node name="Node" type="Node"]
